@@ -9,6 +9,10 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { StaffDetailsComponent } from './staff-details/staff-details.component';
 import { WilmuDetailsComponent } from './wilmu-details/wilmu-details.component';
+import { SportsComponent } from './wilmu-details/sports/sports.component';
+import { AdmissionsComponent } from './wilmu-details/admissions/admissions.component';
+import { OptComponent } from './wilmu-details/opt/opt.component';
+import { CptComponent } from './wilmu-details/cpt/cpt.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { WilmuDetailsComponent } from './wilmu-details/wilmu-details.component';
     NavigationComponent,
     StudentDetailsComponent,
     StaffDetailsComponent,
-    WilmuDetailsComponent
+    WilmuDetailsComponent,
+    SportsComponent,
+    AdmissionsComponent,
+    OptComponent,
+    CptComponent
   ],
   imports: [
     BrowserModule,
