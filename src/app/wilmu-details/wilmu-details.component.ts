@@ -11,8 +11,9 @@ export class WilmuDetailsComponent {
 
   }
 
-  navigateToAdmissions(){
-    
+  navigateToAdmissions(type : string){
+    this.router.navigate(['wilmu/'+ type]);
+  
   }
  
 

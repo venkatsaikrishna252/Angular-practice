@@ -1,11 +1,13 @@
 <div class="column">
     <h2>wilmu details</h2>
     <div>
-        <a>sports</a> <br>
-        <a>admissions</a> <br>
-        <a>opt</a> <br>
-        <a>cpt</a>
+        <a (click)="navigateToAdmissions('sports')">sports</a> <br>
+        <a (click)="navigateToAdmissions('admissions')">admissions</a> <br>
+        <a (click)="navigateToAdmissions('opt')">opt</a> <br>
+        <a (click)="navigateToAdmissions('cpt')">cpt</a>
     </div>
+
+    <router-outlet></router-outlet>
     
 </div>
 
