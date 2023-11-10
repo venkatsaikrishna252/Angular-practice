@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +15,7 @@ import { SportsComponent } from './wilmu-details/sports/sports.component';
 import { AdmissionsComponent } from './wilmu-details/admissions/admissions.component';
 import { OptComponent } from './wilmu-details/opt/opt.component';
 import { CptComponent } from './wilmu-details/cpt/cpt.component';
+import { UniversityComponent } from './university/university.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +29,14 @@ import { CptComponent } from './wilmu-details/cpt/cpt.component';
     SportsComponent,
     AdmissionsComponent,
     OptComponent,
-    CptComponent
+    CptComponent,
+    UniversityComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

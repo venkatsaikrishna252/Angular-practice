@@ -21,6 +21,10 @@ export class NavigationComponent {
     this.router.navigate(['wilmu']);
   }
 
+  navigateToUniversity(){
+    this.router.navigate(['university']);
+  }
+
 
 
   
