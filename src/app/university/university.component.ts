@@ -8,7 +8,11 @@ import { UniversityService } from '../university.service';
 })
 export class UniversityComponent {
 
-  universitiesDataList :any;
+  universitiesDataList :any[]=[];
+  showTable:boolean;
+  
+  
+
 
   constructor(private universityServices:UniversityService){
 
@@ -16,12 +20,28 @@ export class UniversityComponent {
 
   getAllUniversities(){
     this.universityServices.getAllUniversitiesList().subscribe(
-      (successResponse)=>{
-        this.universitiesDataList=successResponse;
-        console.log(this.universitiesDataList);
+      (successResponse : any)=>{
+       this.showTable=true;
+       successResponse.forEach((university)=>{
+        
+        if(university.country==="Canada" || university.country==="India"){
+          university['status']="open";
+          this.universitiesDataList.push(university);
+          
+        }else{
+          university['status']="close";
+          this.universitiesDataList.push(university);
+        }
+        
+
+          // console.log(this.universitiesDataList);
+      
+       })
+      //  this.universitiesDataList=successResponse; 
+       
         
       },
-      (errorResponse)=>{
+      (errorResponse : any)=>{
         this.universitiesDataList=errorResponse;
         console.log(this.universitiesDataList);
 
