@@ -7,21 +7,22 @@ import { SportsComponent } from './wilmu-details/sports/sports.component';
 import { AdmissionsComponent } from './wilmu-details/admissions/admissions.component';
 import { OptComponent } from './wilmu-details/opt/opt.component';
 import { CptComponent } from './wilmu-details/cpt/cpt.component';
-import { UniversityComponent } from './university/university.component';
+// import { UniversityComponent } from './university/university.component';
 
 const routes: Routes = [
   { path: '', redirectTo: "student", pathMatch: 'full' },
   { path: 'student', component: StudentDetailsComponent },
   { path: 'staff', component: StaffDetailsComponent },
-  {
-    path: 'wilmu', component: WilmuDetailsComponent, children: [
-      { path: 'sports', component: SportsComponent },
-      { path: 'admissions', component: AdmissionsComponent },
-      { path: 'opt', component: OptComponent },
-      { path: 'cpt', component: CptComponent }
-    ]
-  },
-  { path: 'university', component: UniversityComponent }
+  {path:'wilmu',loadChildren:()=>import('./wilmu-details/wilmu-details.module').then(m=>m.WilmuDetailsModule)},
+  // {
+  //   path: 'wilmu', component: WilmuDetailsComponent, children: [
+  //     { path: 'sports', component: SportsComponent },
+  //     { path: 'admissions', component: AdmissionsComponent },
+  //     { path: 'opt', component: OptComponent },
+  //     { path: 'cpt', component: CptComponent }
+  //   ]
+  // },
+  { path: 'university', loadChildren:()=>import('./university/university.module').then(m=>m.UniversityModule) }
 
 ];
 
