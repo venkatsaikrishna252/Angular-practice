@@ -9,6 +9,7 @@ export class UniversityService {
   constructor(private http: HttpClient) { }
 
   getAllUniversitiesList(name:string){
-    return this.http.get("http://universities.hipolabs.com/search?country="+name);
+    //const url = ``
+    return this.http.get(`http://universities.hipolabs.com/search?country=${name}`);
   }
 }

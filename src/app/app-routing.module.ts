@@ -10,16 +10,18 @@ import { CptComponent } from './wilmu-details/cpt/cpt.component';
 import { UniversityComponent } from './university/university.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:"student",pathMatch:'full'},
-  {path:'student',component:StudentDetailsComponent},
-  {path:'staff',component:StaffDetailsComponent},
-  {path:'wilmu',component:WilmuDetailsComponent,children:[
-    {path:'sports',component:SportsComponent},
-    {path:'admissions',component:AdmissionsComponent},
-    {path:'opt',component:OptComponent},
-    {path:'cpt',component:CptComponent}
-  ]},
-  {path:'university',component:UniversityComponent}
+  { path: '', redirectTo: "student", pathMatch: 'full' },
+  { path: 'student', component: StudentDetailsComponent },
+  { path: 'staff', component: StaffDetailsComponent },
+  {
+    path: 'wilmu', component: WilmuDetailsComponent, children: [
+      { path: 'sports', component: SportsComponent },
+      { path: 'admissions', component: AdmissionsComponent },
+      { path: 'opt', component: OptComponent },
+      { path: 'cpt', component: CptComponent }
+    ]
+  },
+  { path: 'university', component: UniversityComponent }
 
 ];
 
