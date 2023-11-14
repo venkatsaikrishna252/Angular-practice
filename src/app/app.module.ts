@@ -29,12 +29,12 @@ import { FormsModule } from '@angular/forms';
     NavigationComponent,
     StudentDetailsComponent,
     StaffDetailsComponent,
-    WilmuDetailsComponent,
-    SportsComponent,
-    AdmissionsComponent,
-    OptComponent,
-    CptComponent,
-    UniversityComponent,
+    // WilmuDetailsComponent,
+    // SportsComponent,
+    // AdmissionsComponent,
+    // OptComponent,
+    // CptComponent
+    // UniversityComponent,
     
     
   ],
