@@ -1,3 +1,8 @@
+<!-- <button (click)="getAllUniversities()">search</button> -->
+<br>
+<label for="countryName" >Enter country name</label>
+<br>
+<input type="text" id="countryName" name="countryName" [(ngModel)]="country">
 <button (click)="getAllUniversities()">search</button>
 
 <table id="customers" *ngIf=showTable>
@@ -7,7 +12,7 @@
       <th>university name</th>
       <th>Domain Length</th>
       <th>Web Pages</th>
-      <th>status</th>
+      <!-- <th>status</th> -->
     </tr>
     <!-- <tr>
       <td>{{universitiesDataList[0].alpha_two_code}}</td>
@@ -25,7 +30,7 @@
       <td>{{university.name}}</td>
       <td>{{university.domains.length}}</td>
       <td>{{university.web_pages.length}}</td>
-      <td>{{university.status}}</td>
+      <!-- <td>{{university.status}}</td> -->
     </tr>
     
 
