@@ -30,10 +30,10 @@ import { FormsModule } from '@angular/forms';
     StudentDetailsComponent,
     StaffDetailsComponent,
     // WilmuDetailsComponent,
-    SportsComponent,
-    AdmissionsComponent,
-    OptComponent,
-    CptComponent
+    // SportsComponent,
+    // AdmissionsComponent,
+    // OptComponent,
+    // CptComponent
     // UniversityComponent,
     
     
