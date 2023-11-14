@@ -16,6 +16,10 @@ import { AdmissionsComponent } from './wilmu-details/admissions/admissions.compo
 import { OptComponent } from './wilmu-details/opt/opt.component';
 import { CptComponent } from './wilmu-details/cpt/cpt.component';
 import { UniversityComponent } from './university/university.component';
+import { FormsModule } from '@angular/forms';
+
+
+
 
 @NgModule({
   declarations: [
@@ -32,11 +36,14 @@ import { UniversityComponent } from './university/university.component';
     CptComponent,
     UniversityComponent,
     
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

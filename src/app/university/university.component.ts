@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UniversityService } from '../university.service';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-university',
@@ -10,33 +11,21 @@ export class UniversityComponent {
 
   universitiesDataList :any[]=[];
   showTable:boolean;
+  country:string="india";
   
   
 
 
   constructor(private universityServices:UniversityService){
+    // this.getAllUniversities();
 
   }
 
   getAllUniversities(){
-    this.universityServices.getAllUniversitiesList().subscribe(
+    this.universityServices.getAllUniversitiesList(this.country).subscribe(
       (successResponse : any)=>{
        this.showTable=true;
-       successResponse.forEach((university)=>{
-        
-        if(university.country==="Canada" || university.country==="India"){
-          university['status']="open";
-          this.universitiesDataList.push(university);
-          
-        }else{
-          university['status']="close";
-          this.universitiesDataList.push(university);
-        }
-        
-
-          // console.log(this.universitiesDataList);
-      
-       })
+       this.universitiesDataList=successResponse;
       //  this.universitiesDataList=successResponse; 
        
         
