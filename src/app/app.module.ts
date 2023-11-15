@@ -17,6 +17,8 @@ import { OptComponent } from './wilmu-details/opt/opt.component';
 import { CptComponent } from './wilmu-details/cpt/cpt.component';
 import { UniversityComponent } from './university/university.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+// import { HomeComponent } from './home/home.component';
 
 
 
@@ -29,6 +31,8 @@ import { FormsModule } from '@angular/forms';
     NavigationComponent,
     StudentDetailsComponent,
     StaffDetailsComponent,
+    HomeComponent,
+    HomeComponent
     // WilmuDetailsComponent,
     // SportsComponent,
     // AdmissionsComponent,

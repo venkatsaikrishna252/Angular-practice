@@ -7,10 +7,12 @@ import { SportsComponent } from './wilmu-details/sports/sports.component';
 import { AdmissionsComponent } from './wilmu-details/admissions/admissions.component';
 import { OptComponent } from './wilmu-details/opt/opt.component';
 import { CptComponent } from './wilmu-details/cpt/cpt.component';
+ import { HomeComponent } from './home/home.component';
 // import { UniversityComponent } from './university/university.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: "student", pathMatch: 'full' },
+   { path: '', redirectTo: "home", pathMatch: 'full' },
+   {path:'home',component:HomeComponent},
   { path: 'student', component: StudentDetailsComponent },
   { path: 'staff', component: StaffDetailsComponent },
   {path:'wilmu',loadChildren:()=>import('./wilmu-details/wilmu-details.module').then(m=>m.WilmuDetailsModule)},
