@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { UniversityRoutingModule } from './university-routing.module';
 import { UniversityComponent } from './university.component';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     UniversityRoutingModule,
-    FormsModule
+    FormsModule,
+   
+    RouterModule
   ]
 })
 export class UniversityModule { }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule, createComponent } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { StaffDetailsComponent } from './staff-details/staff-details.component';
@@ -8,6 +8,8 @@ import { AdmissionsComponent } from './wilmu-details/admissions/admissions.compo
 import { OptComponent } from './wilmu-details/opt/opt.component';
 import { CptComponent } from './wilmu-details/cpt/cpt.component';
  import { HomeComponent } from './home/home.component';
+import { AccountComponent } from './account/account.component';
+import { CreateComponent } from './account/create/create.component';
 // import { UniversityComponent } from './university/university.component';
 
 const routes: Routes = [
@@ -15,6 +17,10 @@ const routes: Routes = [
    {path:'home',component:HomeComponent},
   { path: 'student', component: StudentDetailsComponent },
   { path: 'staff', component: StaffDetailsComponent },
+  {path:'account',loadChildren:()=>import('./account/account.module').then(m=>m.AccountModule)},
+//   {path:'account',component:AccountComponent,children:[
+//     {path:'create', component:CreateComponent}
+// ]},
   {path:'wilmu',loadChildren:()=>import('./wilmu-details/wilmu-details.module').then(m=>m.WilmuDetailsModule)},
   // {
   //   path: 'wilmu', component: WilmuDetailsComponent, children: [

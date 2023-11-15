@@ -29,6 +29,12 @@ export class NavigationComponent {
     this.router.navigate(['home']);
   }
 
+  navigateToAccount(){
+    this.router.navigate(['account']);
+  }
+
+  
+
 
 
 
