@@ -25,6 +25,11 @@ export class NavigationComponent {
     this.router.navigate(['university']);
   }
 
+  navigateToHome(){
+    this.router.navigate(['home']);
+  }
+
+
 
 
   
