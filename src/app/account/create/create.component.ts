@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
@@ -23,9 +23,9 @@ export class CreateComponent {
 
    createStudentForm(){
     this.studentForm=this.fb.group({
-      firstName:[],
-      lastName:[],
-      email:[]
+      firstName:['',Validators.compose([Validators.required,Validators.maxLength(6)])],
+      lastName:[''],
+      email:['']
     })
     
    }

@@ -18,7 +18,6 @@ import { BrowserModule } from '@angular/platform-browser';
     AccountRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserModule
   ]
 })
 export class AccountModule { }
