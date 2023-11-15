@@ -5,19 +5,22 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BasicComponentComponent } from './basic-component/basic-component.component';
+
 import { HeaderComponent } from './header/header.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { StaffDetailsComponent } from './staff-details/staff-details.component';
-import { WilmuDetailsComponent } from './wilmu-details/wilmu-details.component';
-import { SportsComponent } from './wilmu-details/sports/sports.component';
-import { AdmissionsComponent } from './wilmu-details/admissions/admissions.component';
-import { OptComponent } from './wilmu-details/opt/opt.component';
-import { CptComponent } from './wilmu-details/cpt/cpt.component';
-import { UniversityComponent } from './university/university.component';
-import { FormsModule } from '@angular/forms';
+// import { WilmuDetailsComponent } from './wilmu-details/wilmu-details.component';
+// import { SportsComponent } from './wilmu-details/sports/sports.component';
+// import { AdmissionsComponent } from './wilmu-details/admissions/admissions.component';
+// import { OptComponent } from './wilmu-details/opt/opt.component';
+// import { CptComponent } from './wilmu-details/cpt/cpt.component';
+// import { UniversityComponent } from './university/university.component';
+import { FormControl, FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { RouterModule } from '@angular/router';
+// import { AccountComponent } from './account/account.component';
+// import { CreateComponent } from './account/create/create.component';
 // import { HomeComponent } from './home/home.component';
 
 
@@ -26,13 +29,16 @@ import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
-    BasicComponentComponent,
+    
     HeaderComponent,
     NavigationComponent,
     StudentDetailsComponent,
     StaffDetailsComponent,
     HomeComponent,
     HomeComponent
+    
+    // AccountComponent,
+    // CreateComponent
     // WilmuDetailsComponent,
     // SportsComponent,
     // AdmissionsComponent,
@@ -46,7 +52,10 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FormControl,
+    RouterModule
+  
    
   ],
   providers: [],

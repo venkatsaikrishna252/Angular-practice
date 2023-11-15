@@ -7,6 +7,7 @@ import { SportsComponent } from './sports/sports.component';
 import { AdmissionsComponent } from './admissions/admissions.component';
 import { CptComponent } from './cpt/cpt.component';
 import { OptComponent } from './opt/opt.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { OptComponent } from './opt/opt.component';
   ],
   imports: [
     CommonModule,
-    WilmuDetailsRoutingModule
+    WilmuDetailsRoutingModule,
+    RouterModule
     
   ]
 })
