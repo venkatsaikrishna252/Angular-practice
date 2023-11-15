@@ -16,7 +16,7 @@ import { StaffDetailsComponent } from './staff-details/staff-details.component';
 // import { OptComponent } from './wilmu-details/opt/opt.component';
 // import { CptComponent } from './wilmu-details/cpt/cpt.component';
 // import { UniversityComponent } from './university/university.component';
-import { FormControl, FormsModule } from '@angular/forms';
+import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 // import { AccountComponent } from './account/account.component';
@@ -53,7 +53,7 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    FormControl,
+    ReactiveFormsModule,
     RouterModule
   
    
