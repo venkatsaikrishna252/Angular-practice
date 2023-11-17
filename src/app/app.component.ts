@@ -1,15 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UniversityService } from './university.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title: string = "UI Tutorial";
   duration:string="hrs"
   name: string[]=["sai","venkat","krishna"];
   id: number[]=[12,11,12];
+
+  constructor(private universityService: UniversityService) {
+
+  }
+
+
+  ngOnInit(): void {
+    this.getUniversities();
+  }
+
+  getUniversities() {
+    this.universityService.getAllUnivs()
+//     .subscribe(
+//       (resp) => {
+//         console.log(resp)
+// ;      },
+//       (error) => {
+
+//       }
+//     )
+  }
 
   getAngularTutorial(){
     this.title="Angular Tutorial";
