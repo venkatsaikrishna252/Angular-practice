@@ -9,6 +9,11 @@ export class GetService {
   uniLength = new BehaviorSubject<number>(null);
 
   uniLength$ = this.uniLength.asObservable();
+
+  cntLength= new BehaviorSubject<number>(null);
+
+  cntLength$= this.cntLength.asObservable();
+
   
 
   constructor() { }
@@ -17,4 +22,13 @@ export class GetService {
     console.log(univLength);
     this.uniLength.next(univLength);
   }
+
+  getAC(count:number){
+    console.log(count);
+
+    this.cntLength.next(count);
+       
+  }
+
+  
 }

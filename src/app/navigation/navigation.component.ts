@@ -14,6 +14,8 @@ export class NavigationComponent implements OnInit {
 
   noOfItemsInCart: number = null;
 
+  noOfCnt:number=null;
+
   constructor(private router:Router, private getService: GetService, private cartService: CartService){
     
   }
@@ -26,7 +28,7 @@ export class NavigationComponent implements OnInit {
         console.log(cartIItemsInfo);
         this.noOfItemsInCart = cartIItemsInfo.length;
       }
-      )
+      );
 
 
     this.getService.uniLength$.subscribe(
@@ -34,6 +36,12 @@ export class NavigationComponent implements OnInit {
         this.totalNoOfUniversities = univLen;
       },
       () => {}
+    );
+
+    this.getService.cntLength$.subscribe(
+      (cL:number)=>{
+        this.noOfCnt=cL;
+      },()=>{}
     );
   }
 

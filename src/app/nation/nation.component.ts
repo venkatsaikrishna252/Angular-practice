@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { NationService } from './nation.service';
 import { CartService } from '../cart.service';
+import { CountryService } from '../country.service';
 
 @Component({
   selector: 'app-nation',
@@ -14,11 +15,11 @@ export class NationComponent {
   showData:boolean=false;
   constructor(private router:Router,
     private cartService: CartService,
-    private nationService:NationService){}
+    private nationService:NationService
+    ){}
 
   ngOnIt():void{
    
-    
   }
 
   navigateToLocation(type:string){
@@ -40,6 +41,10 @@ export class NationComponent {
     )
   }
 
+  // getNoOfCountries(){
+
+  // }
+
   addToCart() {
 
     let top = {id: Math.floor(Math.random() * 100), name: 'men-t-shirt'};
@@ -49,5 +54,7 @@ export class NationComponent {
     this.cartService.addItemToCart(top);
 
   }
+
+
 
 }

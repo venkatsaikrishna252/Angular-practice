@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UniversityService } from './university.service';
+import { CountryService } from './country.service';
 
 @Component({
   selector: 'app-root',
@@ -12,17 +13,18 @@ export class AppComponent implements OnInit {
   name: string[]=["sai","venkat","krishna"];
   id: number[]=[12,11,12];
 
-  constructor(private universityService: UniversityService) {
+  constructor(private universityService: UniversityService,private countryService:CountryService) {
 
   }
 
 
   ngOnInit(): void {
     this.getUniversities();
+    this.showAllCnt();
   }
 
   getUniversities() {
-    this.universityService.getAllUnivs()
+    this.universityService.getAllUnivs();
 //     .subscribe(
 //       (resp) => {
 //         console.log(resp)
@@ -31,6 +33,10 @@ export class AppComponent implements OnInit {
 
 //       }
 //     )
+  }
+
+  showAllCnt(){
+    this.countryService.getAllCountries();
   }
 
   getAngularTutorial(){
