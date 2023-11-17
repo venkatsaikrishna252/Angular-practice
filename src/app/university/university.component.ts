@@ -24,10 +24,7 @@ export class UniversityComponent {
     // this.getAllUniversities();
 
   }
-  navigateToSchool(type:string){
-    this.router.navigate(['university/'+type]);
-  }
-
+  
   getAllUniversities(){
     this.universityServices.getAllUniversitiesList(this.country).subscribe(
       (successResponse : any)=>{
