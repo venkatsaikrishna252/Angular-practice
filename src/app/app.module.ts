@@ -19,6 +19,11 @@ import { StaffDetailsComponent } from './staff-details/staff-details.component';
 import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
+import { NationComponent } from './nation/nation.component';
+import { NepalComponent } from './nation/nepal/nepal.component';
+import { IndiaComponent } from './nation/india/india.component';
+import { OverviewComponent } from './shopping/overview/overview.component';
+import { TableComponent } from './shopping/table/table.component';
 // import { AccountComponent } from './account/account.component';
 // import { CreateComponent } from './account/create/create.component';
 // import { HomeComponent } from './home/home.component';
@@ -35,7 +40,10 @@ import { RouterModule } from '@angular/router';
     StudentDetailsComponent,
     StaffDetailsComponent,
     HomeComponent,
-    HomeComponent
+    HomeComponent,
+    OverviewComponent,
+    TableComponent,
+    
     
     // AccountComponent,
     // CreateComponent

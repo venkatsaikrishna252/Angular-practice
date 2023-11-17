@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { UniversityService } from '../university.service';
 import { NgModel } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-university',
@@ -16,9 +18,14 @@ export class UniversityComponent {
   
 
 
-  constructor(private universityServices:UniversityService){
+  constructor(private universityServices:UniversityService,
+    private cartService: CartService,
+    private router:Router){
     // this.getAllUniversities();
 
+  }
+  navigateToSchool(type:string){
+    this.router.navigate(['university/'+type]);
   }
 
   getAllUniversities(){
@@ -31,11 +38,17 @@ export class UniversityComponent {
         
       },
       (errorResponse : any)=>{
-        this.universitiesDataList=errorResponse;
-        console.log(this.universitiesDataList);
+        // this.universitiesDataList=errorResponse;
+        console.log(errorResponse);
 
       }
     )
+  }
+
+  addToCart() {
+    let menBottom = {id: Math.floor(Math.random() * 100), name: 'men-jeans'};
+
+    this.cartService.addItemToCart(menBottom);
   }
   
 

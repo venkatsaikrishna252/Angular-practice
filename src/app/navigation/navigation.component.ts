@@ -1,15 +1,43 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { GetService } from '../get.service';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css']
 })
-export class NavigationComponent {
-  constructor(private router:Router){
+export class NavigationComponent implements OnInit {
+
+  totalNoOfUniversities: number = null;
+
+  noOfItemsInCart: number = null;
+
+  constructor(private router:Router, private getService: GetService, private cartService: CartService){
     
   }
+
+  ngOnInit(): void {
+
+
+    this.cartService.cartItemsBs$.subscribe(
+      (cartIItemsInfo) => {
+        console.log(cartIItemsInfo);
+        this.noOfItemsInCart = cartIItemsInfo.length;
+      }
+      )
+
+
+    this.getService.uniLength$.subscribe(
+      (univLen) => {
+        this.totalNoOfUniversities = univLen;
+      },
+      () => {}
+    );
+  }
+
+
 
   navigateToStudent(){
     this.router.navigate(['student']);
@@ -32,7 +60,13 @@ export class NavigationComponent {
   navigateToAccount(){
     this.router.navigate(['account']);
   }
-
+  navigateToNation(){
+    this.router.navigate(['nation']);
+  }
+  
+  navigateToShopping(){
+    this.router.navigate(['shopping']);
+  }
   
 
 
