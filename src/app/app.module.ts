@@ -24,6 +24,9 @@ import { NepalComponent } from './nation/nepal/nepal.component';
 import { IndiaComponent } from './nation/india/india.component';
 import { OverviewComponent } from './shopping/overview/overview.component';
 import { TableComponent } from './shopping/table/table.component';
+import { AbcComponent } from './comp-rel/abc/abc.component';
+import { XyzComponent } from './comp-rel/xyz/xyz.component';
+
 // import { AccountComponent } from './account/account.component';
 // import { CreateComponent } from './account/create/create.component';
 // import { HomeComponent } from './home/home.component';
@@ -40,9 +43,12 @@ import { TableComponent } from './shopping/table/table.component';
     StudentDetailsComponent,
     StaffDetailsComponent,
     HomeComponent,
-    HomeComponent,
+   
     OverviewComponent,
     TableComponent,
+    AbcComponent,
+    XyzComponent,
+    
     
     
     // AccountComponent,

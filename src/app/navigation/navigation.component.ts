@@ -75,6 +75,12 @@ export class NavigationComponent implements OnInit {
   navigateToShopping(){
     this.router.navigate(['shopping']);
   }
+
+  navigateToCompRel(){
+    this.router.navigate(['comp-rel']);
+  }
+
+
   
 
 

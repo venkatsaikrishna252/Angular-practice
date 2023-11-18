@@ -14,16 +14,16 @@ export class OverviewComponent implements OnInit {
   tableData: any;
 
   ngOnInit(): void {
-    this.createForm();
+    this.createTable();
   }
 
   constructor(private fb:FormBuilder, private universityService: UniversityService){
 
   }
 
-  createForm() {
+  createTable() {
     this.shoppingForm = this.fb.group({
-       countryName:[''],
+       countryName:['']
   })
   }
 
@@ -32,7 +32,7 @@ export class OverviewComponent implements OnInit {
     this.universityService.getAllUniversitiesList(this.shoppingForm.getRawValue().countryName).subscribe(
       (results) => {
         console.log(results);
-this.tableData = results;
+        this.tableData = results;
 
 
         
