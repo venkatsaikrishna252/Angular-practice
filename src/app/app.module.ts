@@ -28,6 +28,8 @@ import { AbcComponent } from './comp-rel/abc/abc.component';
 import { XyzComponent } from './comp-rel/xyz/xyz.component';
 import { PopUpComponent } from './pop-up/pop-up.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { HighlightTextDirective } from './highlight-text/highlight-text.directive';
+import { RenderingDirective } from './highlight-text/rendering.directive';
 
 // import { AccountComponent } from './account/account.component';
 // import { CreateComponent } from './account/create/create.component';
@@ -51,6 +53,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     AbcComponent,
     XyzComponent,
     PopUpComponent,
+    HighlightTextDirective,
+    RenderingDirective,
     
     
     
