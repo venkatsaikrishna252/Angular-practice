@@ -26,6 +26,8 @@ import { OverviewComponent } from './shopping/overview/overview.component';
 import { TableComponent } from './shopping/table/table.component';
 import { AbcComponent } from './comp-rel/abc/abc.component';
 import { XyzComponent } from './comp-rel/xyz/xyz.component';
+import { PopUpComponent } from './pop-up/pop-up.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 // import { AccountComponent } from './account/account.component';
 // import { CreateComponent } from './account/create/create.component';
@@ -48,6 +50,7 @@ import { XyzComponent } from './comp-rel/xyz/xyz.component';
     TableComponent,
     AbcComponent,
     XyzComponent,
+    PopUpComponent,
     
     
     
@@ -68,7 +71,9 @@ import { XyzComponent } from './comp-rel/xyz/xyz.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    MatDialogModule
+    
   
    
   ],

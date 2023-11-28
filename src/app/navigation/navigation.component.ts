@@ -79,6 +79,9 @@ export class NavigationComponent implements OnInit {
   navigateToCompRel(){
     this.router.navigate(['comp-rel']);
   }
+  navigateToPopUp(){
+    this.router.navigate(['pop-up']);
+  }
 
 
   

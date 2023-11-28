@@ -13,6 +13,7 @@ import { CreateComponent } from './account/create/create.component';
 import { NationComponent } from './nation/nation.component';
 import { OverviewComponent } from './shopping/overview/overview.component';
 import { AbcComponent } from './comp-rel/abc/abc.component';
+import { PopUpComponent } from './pop-up/pop-up.component';
 // import { UniversityComponent } from './university/university.component';
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'shopping', component: OverviewComponent },
   { path: 'comp-rel', component: AbcComponent},
   { path: 'staff', component: StaffDetailsComponent },
+  { path: 'pop-up', component: PopUpComponent },
   {path:'nation',loadChildren:()=>import('./nation/nation.module').then(m=>m.NationModule)},
   {path:'account',loadChildren:()=>import('./account/account.module').then(m=>m.AccountModule)},
 //   {path:'account',component:AccountComponent,children:[
