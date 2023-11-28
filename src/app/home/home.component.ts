@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { CountryService } from '../country.service';
+import { MatDialog } from '@angular/material/dialog';
+import { PopUpComponent } from '../pop-up/pop-up.component';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +10,16 @@ import { CountryService } from '../country.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
   
-  constructor(){
+  
+  constructor(private md:MatDialog){
+
+  }
+
+  popUpFunction(){
+
+    this.md.open(PopUpComponent);
 
   }
 
