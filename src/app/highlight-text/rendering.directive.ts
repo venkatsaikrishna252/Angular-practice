@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostBinding, HostListener, OnInit, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, HostBinding, HostListener, Input, OnInit, Renderer2 } from '@angular/core';
 import { EventManager } from '@angular/platform-browser';
 
 @Directive({
@@ -15,6 +15,9 @@ export class RenderingDirective implements OnInit{
   
   }
 
+  @Input() defaultColor:string;
+  @Input() highlightColor:string;
+
   @HostBinding('style.background') color:string;
 
   @HostListener('mouseover') onMouseOver(){
@@ -27,7 +30,7 @@ export class RenderingDirective implements OnInit{
     
     // )
 
-    this.color='skyblue';
+    this.color=this.defaultColor;
   }
 
   @HostListener('mouseleave') onMouseLeave(){
@@ -40,7 +43,7 @@ export class RenderingDirective implements OnInit{
     
     // )
 
-    this.color='pink';
+    this.color=this.highlightColor;
   }
 
   @HostListener('click') onClick(){
