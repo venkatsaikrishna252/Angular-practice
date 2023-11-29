@@ -1,3 +1,4 @@
+import { style } from '@angular/animations';
 import { Directive, ElementRef, OnInit } from '@angular/core';
 
 @Directive({
@@ -5,9 +6,13 @@ import { Directive, ElementRef, OnInit } from '@angular/core';
 })
 export class HighlightTextDirective implements OnInit {
 
-  constructor(private elRef:ElementRef) { }
+  constructor(private elRef:ElementRef){
+
+  }
   ngOnInit(): void {
-    (this.elRef.nativeElement as HTMLElement).style.background='grey';
+
+    (this.elRef.nativeElement as HTMLElement).style.backgroundColor='lightgreen';
+    
   }
 
 }

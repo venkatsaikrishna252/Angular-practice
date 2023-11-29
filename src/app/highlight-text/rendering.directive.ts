@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, HostBinding, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { EventManager } from '@angular/platform-browser';
 
 @Directive({
@@ -14,30 +14,48 @@ export class RenderingDirective implements OnInit{
     
   
   }
-  
-  @HostListener('mouseover') onmouseover(){
-    this.render.setStyle(
-      this.elRef.nativeElement,
-      'background-color',
-      'skyblue');
 
-   }
+  @HostBinding('style.background') color:string;
 
-   @HostListener('mouseleave') onmouseleave(){
-    this.render.setStyle(
-      this.elRef.nativeElement,
-      'background-color',
-      'pink');
+  @HostListener('mouseover') onMouseOver(){
 
-   }
+    // this.render.setStyle(
 
-   @HostListener('click') onclick(){
-    this.render.setStyle(
-      this.elRef.nativeElement,
-      'background-color',
-      'black');
+    //   this.elRef.nativeElement,
+    //   'background',
+    //   'skyblue'
+    
+    // )
 
-   }
+    this.color='skyblue';
+  }
+
+  @HostListener('mouseleave') onMouseLeave(){
+
+    // this.render.setStyle(
+
+    //   this.elRef.nativeElement,
+    //   'background',
+    //   'pink'
+    
+    // )
+
+    this.color='pink';
+  }
+
+  @HostListener('click') onClick(){
+
+    // this.render.setStyle(
+
+    //   this.elRef.nativeElement,
+    //   'background',
+    //   'black'
+    
+    // )
+
+    this.color='black';
+  }
+   
     
   }
 
