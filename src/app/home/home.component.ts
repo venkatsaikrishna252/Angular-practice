@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, TemplateRef } from '@angular/core';
 import { CountryService } from '../country.service';
 import { MatDialog } from '@angular/material/dialog';
 import { PopUpComponent } from '../pop-up/pop-up.component';
@@ -10,6 +10,9 @@ import { PopUpComponent } from '../pop-up/pop-up.component';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
+  isAvailable:boolean=true;
+  value=100;
 
   
   
