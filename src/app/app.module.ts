@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, TemplateRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -30,6 +30,7 @@ import { PopUpComponent } from './pop-up/pop-up.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { HighlightTextDirective } from './highlight-text/highlight-text.directive';
 import { RenderingDirective } from './highlight-text/rendering.directive';
+import { StuctureDirectiveDirective } from './highlight-text/stucture-directive.directive';
 
 // import { AccountComponent } from './account/account.component';
 // import { CreateComponent } from './account/create/create.component';
@@ -55,6 +56,7 @@ import { RenderingDirective } from './highlight-text/rendering.directive';
     PopUpComponent,
     HighlightTextDirective,
     RenderingDirective,
+    StuctureDirectiveDirective,
     
     
     
@@ -78,8 +80,8 @@ import { RenderingDirective } from './highlight-text/rendering.directive';
     RouterModule,
     MatDialogModule
     
+    
   
-   
   ],
   providers: [],
   bootstrap: [AppComponent]
