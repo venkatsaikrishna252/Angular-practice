@@ -31,6 +31,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { HighlightTextDirective } from './highlight-text/highlight-text.directive';
 import { RenderingDirective } from './highlight-text/rendering.directive';
 import { StuctureDirectiveDirective } from './highlight-text/stucture-directive.directive';
+import { LoginComponent } from './login/login.component';
 
 // import { AccountComponent } from './account/account.component';
 // import { CreateComponent } from './account/create/create.component';
@@ -57,6 +58,7 @@ import { StuctureDirectiveDirective } from './highlight-text/stucture-directive.
     HighlightTextDirective,
     RenderingDirective,
     StuctureDirectiveDirective,
+    LoginComponent,
     
     
     

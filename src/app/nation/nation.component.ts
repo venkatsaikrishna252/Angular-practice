@@ -22,8 +22,24 @@ export class NationComponent {
    
   }
 
-  navigateToLocation(type:string){
-    this.router.navigate(['nation/'+type]);
+  navigateToIndia(){
+    this.router.navigate(['india']);
+    this.nationService.getIndiaUniversities().subscribe(
+      (sr)=>{
+        this.showData=true;
+        this.nationalUniversities=sr;
+      }
+    )
+  }
+
+  navigateToNepal(){
+    this.router.navigate(['Nepal']);
+    this.nationService.getNepalUniversities().subscribe(
+      (sr)=>{
+        this.showData=true;
+        this.nationalUniversities=sr;
+      }
+    )
   }
   
   getNationalUniversities(){
