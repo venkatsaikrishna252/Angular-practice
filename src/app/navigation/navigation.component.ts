@@ -83,6 +83,11 @@ export class NavigationComponent implements OnInit {
     this.router.navigate(['pop-up']);
   }
 
+  navigateToLogin(){
+    this.router.navigate(['login']);
+  }
+
+
 
   
 

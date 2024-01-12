@@ -14,6 +14,7 @@ import { NationComponent } from './nation/nation.component';
 import { OverviewComponent } from './shopping/overview/overview.component';
 import { AbcComponent } from './comp-rel/abc/abc.component';
 import { PopUpComponent } from './pop-up/pop-up.component';
+import { LoginComponent } from './login/login.component';
 // import { UniversityComponent } from './university/university.component';
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'comp-rel', component: AbcComponent},
   { path: 'staff', component: StaffDetailsComponent },
   { path: 'pop-up', component: PopUpComponent },
+  { path: 'login', component: LoginComponent },
   {path:'nation',loadChildren:()=>import('./nation/nation.module').then(m=>m.NationModule)},
   {path:'account',loadChildren:()=>import('./account/account.module').then(m=>m.AccountModule)},
 //   {path:'account',component:AccountComponent,children:[
