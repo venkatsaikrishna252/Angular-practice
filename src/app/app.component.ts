@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { UniversityService } from './university.service';
 import { CountryService } from './country.service';
 
@@ -14,10 +14,13 @@ export class AppComponent implements OnInit {
   duration:string="hrs"
   name: string[]=["sai","venkat","krishna"];
   id: number[]=[12,11,12];
+  universityService = inject(UniversityService);
+  countryService = inject(CountryService);
+   
 
-  constructor(private universityService: UniversityService,private countryService:CountryService) {
+  // constructor(private universityService: UniversityService,private countryService:CountryService) {
 
-  }
+  // }
 
 
   ngOnInit(): void {

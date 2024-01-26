@@ -14,6 +14,8 @@ import { NationComponent } from './nation/nation.component';
 import { OverviewComponent } from './shopping/overview/overview.component';
 import { AbcComponent } from './comp-rel/abc/abc.component';
 import { PopUpComponent } from './pop-up/pop-up.component';
+import { checkRoleGuard } from './check-role.guard';
+import { checkRole2Guard } from './check-role2.guard';
 // import { UniversityComponent } from './university/university.component';
 
 const routes: Routes = [
@@ -22,9 +24,9 @@ const routes: Routes = [
   { path: 'student', component: StudentDetailsComponent },
   { path: 'shopping', component: OverviewComponent },
   { path: 'comp-rel', component: AbcComponent},
-  { path: 'staff', component: StaffDetailsComponent },
+  { path: 'staff', component: StaffDetailsComponent, canActivate: [checkRoleGuard], canDeactivate: [checkRole2Guard] },
   { path: 'pop-up', component: PopUpComponent },
-  {path:'nation',loadChildren:()=>import('./nation/nation.module').then(m=>m.NationModule)},
+  {path:'nation',loadChildren:()=>import('./nation/nation.module').then(m=>m.NationModule), canMatch: [checkRoleGuard]},
   {path:'account',loadChildren:()=>import('./account/account.module').then(m=>m.AccountModule)},
 //   {path:'account',component:AccountComponent,children:[
 //     {path:'create', component:CreateComponent}

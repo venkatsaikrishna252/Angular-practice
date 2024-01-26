@@ -8,7 +8,7 @@ import { CptComponent } from './cpt/cpt.component';
 
 const routes: Routes = [
   {path:'',component:WilmuDetailsComponent,children: [
-        { path: 'sports', component: SportsComponent },
+        { path: 'sports', component: SportsComponent,  },
         { path: 'admissions', component: AdmissionsComponent },
         { path: 'opt', component: OptComponent },
         { path: 'cpt', component: CptComponent }
